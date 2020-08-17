@@ -1,88 +1,152 @@
-" Vim color file
-" Maintainer:   Your name <youremail@something.com>
-" Last Change:  
-" URL:		
+" Vim colorscheme template file
+" Author: Sasha
 
-" cool help screens
-" :he group-name
-" :he highlight-groups
-" :he cterm-colors
+set background=dark
 
-" your pick:
-set background=dark	" or light
-hi clear
+highlight clear
 if exists("syntax_on")
     syntax reset
 endif
-let g:colors_name="mycolorscheme"
+let g:colors_name="anciet pond"
 
-"hi Normal
+"----------------------------------------------------------------
+" General settings                                              |
+"----------------------------------------------------------------
+"----------------------------------------------------------------
+" Syntax group   | Foreground    | Background    | Style        |
+"----------------------------------------------------------------
 
-" OR
+" --------------------------------
+" Editor settings
+" --------------------------------
+hi Normal          ctermfg=grey    ctermbg=2d4040    cterm=none
+hi Cursor          ctermfg=none    ctermbg=none    cterm=none
+hi CursorLine      ctermfg=none    ctermbg=none    cterm=none
+hi LineNr          ctermfg=none    ctermbg=none    cterm=none
+hi CursorLineNR    ctermfg=none    ctermbg=none    cterm=none
 
-" highlight clear Normal
-" set background&
-" highlight clear
-" if &background == "light"
-"   highlight Error ...
-"   ...
-" else
-"   highlight Error ...
-"   ...
-" endif
+" -----------------
+" - Number column -
+" -----------------
+hi CursorColumn    ctermfg=none    ctermbg=none    cterm=none
+hi FoldColumn      ctermfg=none    ctermbg=none    cterm=none
+hi SignColumn      ctermfg=none    ctermbg=none    cterm=none
+hi Folded          ctermfg=none    ctermbg=none    cterm=none
 
-" A good way to see what your colorscheme does is to follow this procedure:
-" :w 
-" :so % 
-"
-" Then to see what the current setting is use the highlight command.  
-" For example,
-" 	:hi Cursor
-" gives
-"	Cursor         xxx guifg=bg guibg=fg 
- 	
-" Uncomment and complete the commands you want to change from the default.
+" -------------------------
+" - Window/Tab delimiters -
+" -------------------------
+hi VertSplit       ctermfg=none    ctermbg=none    cterm=none
+hi ColorColumn     ctermfg=none    ctermbg=none    cterm=none
+hi TabLine         ctermfg=none    ctermbg=none    cterm=none
+hi TabLineFill     ctermfg=none    ctermbg=none    cterm=none
+hi TabLineSel      ctermfg=none    ctermbg=none    cterm=none
 
-"hi Cursor		
-"hi CursorIM	
-"hi Directory	
-"hi DiffAdd		
-"hi DiffChange	
-"hi DiffDelete	
-"hi DiffText	
-"hi ErrorMsg	
-"hi VertSplit	
-"hi Folded		
-"hi FoldColumn	
-"hi IncSearch	
-"hi LineNr		
-"hi ModeMsg		
-"hi MoreMsg		
-"hi NonText		
-"hi Question	
-"hi Search		
-"hi SpecialKey	
-"hi StatusLine	
-"hi StatusLineNC	
-"hi Title		
-"hi Visual		
-"hi VisualNOS	
-"hi WarningMsg	
-"hi WildMenu	
-"hi Menu		
-"hi Scrollbar	
-"hi Tooltip		
+" -------------------------------
+" - File Navigation / Searching -
+" -------------------------------
+hi Directory       ctermfg=none    ctermbg=none    cterm=none
+hi Search          ctermfg=none    ctermbg=none    cterm=none
+hi IncSearch       ctermfg=none    ctermbg=none    cterm=none
 
-" syntax highlighting groups
-"hi Comment
-"hi Constant	
-"hi Identifier	
-"hi Statement	
-"hi PreProc	
-"hi Type		
-"hi Special	
-"hi Underlined	
-"hi Ignore		
-"hi Error		
-"hi Todo		
+" -----------------
+" - Prompt/Status -
+" -----------------
+hi StatusLine      ctermfg=none    ctermbg=none    cterm=none
+hi StatusLineNC    ctermfg=none    ctermbg=none    cterm=none
+hi WildMenu        ctermfg=none    ctermbg=none    cterm=none
+hi Question        ctermfg=none    ctermbg=none    cterm=none
+hi Title           ctermfg=none    ctermbg=none    cterm=none
+hi ModeMsg         ctermfg=none    ctermbg=none    cterm=none
+hi MoreMsg         ctermfg=none    ctermbg=none    cterm=none
 
+" --------------
+" - Visual aid -
+" --------------
+hi MatchParen      ctermfg=none    ctermbg=none    cterm=none
+hi Visual          ctermfg=none    ctermbg=none    cterm=none
+hi VisualNOS       ctermfg=none    ctermbg=none    cterm=none
+hi NonText         ctermfg=none    ctermbg=none    cterm=none
+
+hi Todo            ctermfg=none    ctermbg=none    cterm=none
+hi Underlined      ctermfg=none    ctermbg=none    cterm=none
+hi Error           ctermfg=none    ctermbg=none    cterm=none
+hi ErrorMsg        ctermfg=none    ctermbg=none    cterm=none
+hi WarningMsg      ctermfg=none    ctermbg=none    cterm=none
+hi Ignore          ctermfg=none    ctermbg=none    cterm=none
+hi SpecialKey      ctermfg=none    ctermbg=none    cterm=none
+
+" --------------------------------
+" Variable types
+" --------------------------------
+hi Constant        ctermfg=none    ctermbg=none    cterm=none
+hi String          ctermfg=none    ctermbg=none    cterm=none
+hi StringDelimiter ctermfg=none    ctermbg=none    cterm=none
+hi Character       ctermfg=none    ctermbg=none    cterm=none
+hi Number          ctermfg=none    ctermbg=none    cterm=none
+hi Boolean         ctermfg=none    ctermbg=none    cterm=none
+hi Float           ctermfg=none    ctermbg=none    cterm=none
+
+hi Identifier      ctermfg=none    ctermbg=none    cterm=none
+hi Function        ctermfg=none    ctermbg=none    cterm=none
+
+" --------------------------------
+" Language constructs
+" --------------------------------
+hi Statement       ctermfg=none    ctermbg=none    cterm=none
+hi Conditional     ctermfg=none    ctermbg=none    cterm=none
+hi Repeat          ctermfg=none    ctermbg=none    cterm=none
+hi Label           ctermfg=none    ctermbg=none    cterm=none
+hi Operator        ctermfg=none    ctermbg=none    cterm=none
+hi Keyword         ctermfg=none    ctermbg=none    cterm=none
+hi Exception       ctermfg=none    ctermbg=none    cterm=none
+hi Comment         ctermfg=none    ctermbg=none    cterm=none
+
+hi Special         ctermfg=none    ctermbg=none    cterm=none
+hi SpecialChar     ctermfg=none    ctermbg=none    cterm=none
+hi Tag             ctermfg=none    ctermbg=none    cterm=none
+hi Delimiter       ctermfg=none    ctermbg=none    cterm=none
+hi SpecialComment  ctermfg=none    ctermbg=none    cterm=none
+hi Debug           ctermfg=none    ctermbg=none    cterm=none
+
+" ----------
+" - C like -
+" ----------
+hi PreProc         ctermfg=none    ctermbg=none    cterm=none
+hi Include         ctermfg=none    ctermbg=none    cterm=none
+hi Define          ctermfg=none    ctermbg=none    cterm=none
+hi Macro           ctermfg=none    ctermbg=none    cterm=none
+hi PreCondit       ctermfg=none    ctermbg=none    cterm=none
+
+hi Type            ctermfg=none    ctermbg=none    cterm=none
+hi StorageClass    ctermfg=none    ctermbg=none    cterm=none
+hi Structure       ctermfg=none    ctermbg=none    cterm=none
+hi Typedef         ctermfg=none    ctermbg=none    cterm=none
+
+" --------------------------------
+" Diff
+" --------------------------------
+hi DiffAdd         ctermfg=none    ctermbg=none    cterm=none
+hi DiffChange      ctermfg=none    ctermbg=none    cterm=none
+hi DiffDelete      ctermfg=none    ctermbg=none    cterm=none
+hi DiffText        ctermfg=none    ctermbg=none    cterm=none
+
+" --------------------------------
+" Completion menu
+" --------------------------------
+hi Pmenu           ctermfg=none    ctermbg=none    cterm=none
+hi PmenuSel        ctermfg=none    ctermbg=none    cterm=none
+hi PmenuSbar       ctermfg=none    ctermbg=none    cterm=none
+hi PmenuThumb      ctermfg=none    ctermbg=none    cterm=none
+
+" --------------------------------
+" Spelling
+" --------------------------------
+hi SpellBad        ctermfg=none    ctermbg=none    cterm=none
+hi SpellCap        ctermfg=none    ctermbg=none    cterm=none
+hi SpellLocal      ctermfg=none    ctermbg=none    cterm=none
+hi SpellRare       ctermfg=none    ctermbg=none    cterm=none
+
+"--------------------------------------------------------------------
+" Specific settings                                                 |
+"--------------------------------------------------------------------
